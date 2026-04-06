@@ -42,7 +42,7 @@ const drawCanvas = (text: string, subText: string = '', color: string = '#00FF00
 const enablePiP = async (): Promise<void> => {
   const canvas = canvasRef.value!;
   const video = videoRef.value!;
-  // @ts-ignore
+
   video.srcObject = canvas.captureStream(10);
   await video.play();
   await video.requestPictureInPicture();
